@@ -1,16 +1,17 @@
 // B. Calculating Function
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #define ll long long
-using namespace std ;
+#define fast                     \
+    ios::sync_with_stdio(false); \
+    cin.tie(0);                  \
+    cout.tie(0);
+using namespace std;
 
-int main()
+void solve()
 {
-    // fast code
-    ios::sync_with_stdio(false),cout.tie(NULL),cin.tie(0);
+    ll n ;    cin >> n ;
     
-    ll n ;
-    cin >> n ;
     if(n % 2 == 0)
     {
         cout << n /2 << endl;
@@ -30,5 +31,17 @@ int main()
 
     }
 
-    return 0 ;
+  }
+
+int main()
+{
+    fast;
+    ll t = 1 ;
+    // cin >> t ;
+    while(t--)
+    {
+       solve();
+    }
+   
+    return 0;
 }
