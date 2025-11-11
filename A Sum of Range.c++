@@ -1,18 +1,18 @@
 // A. Sum of Range
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #define ll long long
-using namespace std ;
+#define fast                     \
+    ios::sync_with_stdio(false); \
+    cin.tie(0);                  \
+    cout.tie(0);
+using namespace std;
 
-int main()
+void solve()
 {
-    // fast code
-    ios::sync_with_stdio(false),cout.tie(NULL),cin.tie(0);
-    
     ll a , b , sum = 0 ;       
     cin >> a >> b ;
     ll mn = min(a , b) , mx = max(a , b) ;
-    
     
     // 1 ===> 7   ==> sum  (mx * (mx+1)) /2 
     // 5 ===> 7   ===> sum from 1 to 4    ==> (((min-1) * (min) )/ 2)
@@ -28,6 +28,17 @@ int main()
     // sum of odd number from 1 to n ===> ((n+1)/2)^2
     ll odd = (((mx+1)/2)*((mx+1)/2)) - (((mn)/2)*(((mn)/2))) ;        // o(1)
     cout << odd << endl;
-    
-    return 0 ;
+  }
+
+int main()
+{
+    fast;
+    ll t = 1 ;
+    // cin >> t ;
+    while(t--)
+    {
+       solve();
+    }
+   
+    return 0;
 }
